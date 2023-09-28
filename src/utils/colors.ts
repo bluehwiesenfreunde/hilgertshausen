@@ -9,9 +9,9 @@ export const getSpeciesColor = function (species: Species | 'unknown' | 'dead'):
     case 'dead':
       return 'grey';
     case Species.Apple:
-      return 'red';
-    case Species.Pear:
       return 'light-green';
+    case Species.Pear:
+      return 'amber';
     case Species.Plum:
       return 'deep-purple';
     case Species.Cherry:

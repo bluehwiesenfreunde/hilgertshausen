@@ -28,7 +28,7 @@ _converted_data.sort((a, b) => {
   return a.Sorte.localeCompare(b.Sorte);
 });
 
-const toSpecies = function (art: string): Species | 'unknown' | 'dead' {
+export const toSpecies = function (art: string): Species | 'unknown' | 'dead' {
   switch (art) {
     case 'Apfel':
       return Species.Apple;

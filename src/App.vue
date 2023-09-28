@@ -2,15 +2,59 @@
   <q-layout view="hHh LpR fFf">
     <q-header elevated class="bg-primary text-white">
       <q-toolbar>
-        <q-toolbar-title>
+        <q-toolbar-title shrink>
+          <q-btn flat @click="drawerLeft = !drawerLeft" round dense icon="menu" />
           <q-btn flat dense :to="{ name: 'landing-page' }" :label="$t('page.title')" />
         </q-toolbar-title>
-        <q-btn flat icon="mdi-instagram" label="Instagram" />
-        <q-btn flat :label="$t('views.privacy_policy.link')" :to="{ name: 'privacy-policy' }" />
+        <q-btn-dropdown stretch flat label="Dropdown">
+          <q-list>
+            <q-item-label header>Folders</q-item-label>
+            <q-item v-for="n in 3" :key="`x.${n}`" clickable v-close-popup tabindex="0">
+              <q-item-section avatar>
+                <q-avatar icon="folder" color="secondary" text-color="white" />
+              </q-item-section>
+              <q-item-section>
+                <q-item-label>Photos</q-item-label>
+                <q-item-label caption>February 22, 2016</q-item-label>
+              </q-item-section>
+              <q-item-section side>
+                <q-icon name="info" />
+              </q-item-section>
+            </q-item>
+            <q-separator inset spaced />
+            <q-item-label header>Files</q-item-label>
+            <q-item v-for="n in 3" :key="`y.${n}`" clickable v-close-popup tabindex="0">
+              <q-item-section avatar>
+                <q-avatar icon="assignment" color="primary" text-color="white" />
+              </q-item-section>
+              <q-item-section>
+                <q-item-label>Vacation</q-item-label>
+                <q-item-label caption>February 22, 2016</q-item-label>
+              </q-item-section>
+              <q-item-section side>
+                <q-icon name="info" />
+              </q-item-section>
+            </q-item>
+          </q-list>
+        </q-btn-dropdown>
+        <q-space />
+
+        <q-btn
+          dense
+          flat
+          icon="mdi-instagram"
+          :label="$q.screen.gt.xs === true ? 'Instagram' : ''"
+        />
+        <q-btn
+          dense
+          flat
+          :label="$t('views.privacy_policy.link')"
+          :to="{ name: 'privacy-policy' }"
+        />
       </q-toolbar>
     </q-header>
 
-    <q-drawer show-if-above :width="350" elevated>
+    <q-drawer show-if-above class="drawer" elevated v-model="drawerLeft">
       <q-scroll-area class="fit">
         <q-list>
           <q-expansion-item
@@ -67,9 +111,14 @@
                     :to="{ name: 'variety-details', params: { id: variety.id } }"
                   >
                     <q-item-section>
-                      <q-item-label>
-                        {{ variety.name }}
-                      </q-item-label>
+                      {{ variety.name }}
+                    </q-item-section>
+                    <q-item-section avatar>
+                      <q-badge
+                        rounded
+                        :label="getTreesByVarietyId(variety.id).length"
+                        color="grey"
+                      />
                     </q-item-section>
                   </q-item>
                 </q-list>
@@ -118,6 +167,7 @@ import { defineComponent, ref, watch } from 'vue';
 import { RouterView, useRoute } from 'vue-router';
 
 import type { Species, Variety } from '@/models/Variety';
+import { getSpeciesColor } from '@/utils/colors';
 import { ALL_ORCHARDS } from '@/utils/orchards';
 import { getTreesByVarietyId } from '@/utils/trees';
 import { VARIETIES_BY_SPECIES } from '@/utils/varieties';
@@ -133,6 +183,7 @@ export default defineComponent({
   },
   setup() {
     const route = useRoute();
+    const drawerLeft = ref(true);
     const expansionState = ref([false, false, false]);
     const speciesMap = ref<Map<Species, SpeciesInfo>>(new Map());
     VARIETIES_BY_SPECIES.forEach((varieties, species) => {
@@ -167,10 +218,18 @@ export default defineComponent({
     );
 
     return {
-      orchards: ALL_ORCHARDS,
+      drawerLeft,
       expansionState,
+      getSpeciesColor,
+      getTreesByVarietyId,
+      orchards: ALL_ORCHARDS,
       speciesMap,
     };
   },
 });
 </script>
+<style lang="sass">
+@media (min-width: $breakpoint-md-min)
+  .drawer
+    width: 350px
+</style>

@@ -1,7 +1,19 @@
 <template>
-  <q-dialog v-model="card" position="right">
-    <q-card class="my-card" style="width: 350px">
-      <div v-if="selectedMapTree?.images.length > 1">
+  <q-dialog v-model="card" position="right" seamless>
+    <q-card style="width: 350px">
+      <div v-if="selectedMapTree?.images.length === 0">
+        <q-img src="noexistent">
+          <template v-slot:error>
+            <div class="absolute-full flex flex-center">
+              <h6>{{ $t('tree.no_image') }}</h6>
+            </div>
+          </template>
+        </q-img>
+      </div>
+      <div v-else-if="selectedMapTree?.images.length === 1">
+        <q-img :src="selectedMapTree?.images[0]" />
+      </div>
+      <div v-else>
         <q-carousel
           animated
           v-model="slide"
@@ -20,18 +32,6 @@
           />
         </q-carousel>
       </div>
-      <div v-else-if="selectedMapTree?.images.length === 1">
-        <q-img :src="selectedMapTree?.images[0]" />
-      </div>
-      <div v-else>
-        <q-img src="noexistent">
-          <template v-slot:error>
-            <div class="absolute-full flex flex-center">
-              <h6>{{ $t('tree.no_image') }}</h6>
-            </div>
-          </template>
-        </q-img>
-      </div>
 
       <q-card-section>
         <div class="row no-wrap items-center">
@@ -49,21 +49,15 @@
   <ol-map
     :loadTilesWhileAnimating="true"
     :loadTilesWhileInteracting="true"
-    style="height: 600px"
+    style="height: 400px"
     class="shadow-2"
   >
-    <ol-view ref="view" projection="EPSG:3857" :minZoom="14" :maxZoom="19"> </ol-view>
+    <ol-view ref="view" projection="EPSG:3857" :minZoom="14" :maxZoom="19" />
 
     <ol-tile-layer>
       <ol-source-osm url="/tiles/{z}/{x}/{y}.png" />
     </ol-tile-layer>
     <ol-attribution-control />
-
-    <ol-overlay :position="selectedMapTree.coordinates" v-if="selectedMapTree !== undefined">
-      <template>
-        <div class="overlay-content">{{ selectedMapTree }}</div>
-      </template>
-    </ol-overlay>
 
     <ol-interaction-select
       @select="featureSelected"
@@ -94,12 +88,19 @@
             <ol-style-text
               :text="String.fromCodePoint(0xf0531)"
               font='normal normal 400 24px "Material Design Icons"'
-              :scale="tree.tree.properties.id === highlightedTreeId ? 2 : 1"
+              :scale="
+                selectedMapTree === undefined && tree.tree.properties.id === highlightedTreeId
+                  ? 2
+                  : 1
+              "
             >
               <ol-style-fill :color="tree.color" />
               <ol-style-stroke color="black" :width="3" />
             </ol-style-text>
           </ol-style>
+        </ol-feature>
+        <ol-feature>
+          <ol-geom-multi-polygon :coordinates="multiPolygon" />
         </ol-feature>
       </ol-source-vector>
     </ol-vector-layer>
@@ -107,8 +108,7 @@
 </template>
 
 <script lang="ts">
-import type { Position } from 'geojson';
-import type Feature from 'ol/Feature';
+import type { MultiPolygon, Position } from 'geojson';
 import type View from 'ol/View';
 import { singleClick } from 'ol/events/condition';
 import { MultiPoint } from 'ol/geom';
@@ -130,9 +130,6 @@ interface MapTree {
   color: string;
   coordinates: Position;
   images: string[];
-}
-interface SelectedMapTree extends MapTree {
-  images: string[];
   variety: Variety;
 }
 
@@ -143,6 +140,10 @@ export default defineComponent({
       required: true,
     },
     highlightedTreeId: Number,
+    multiPolygon: {
+      type: Object as PropType<MultiPolygon>,
+      required: false,
+    },
   },
   setup(props) {
     const mapTrees = computed<MapTree[]>(() => {
@@ -153,6 +154,8 @@ export default defineComponent({
             tree,
             color: getPaletteColor(getSpeciesColorByTreeId(tree.properties.id)),
             coordinates: fromEPSG4326(tree.geometry.coordinates),
+            images: getTreeImages(tree.properties.id),
+            variety: getVarietyById(tree.properties.variety_id) as Variety,
           };
         });
     });
@@ -160,18 +163,11 @@ export default defineComponent({
     const autoplay = ref(true);
     const card = ref(false);
     const view = ref<View | null>(null);
-    const selectedMapTree = ref<SelectedMapTree | undefined>(undefined);
+    const selectedMapTree = ref<MapTree | undefined>(undefined);
 
     const featureSelected = (event: SelectEvent): void => {
-      console.log('Event');
-      console.log(event);
       if (event.selected.length > 0) {
-        const mapTree = event.selected[0].get('tree') as MapTree;
-        selectedMapTree.value = {
-          ...mapTree,
-          images: getTreeImages(mapTree.tree.properties.id),
-          variety: getVarietyById(mapTree.tree.properties.variety_id) as Variety,
-        };
+        selectedMapTree.value = event.selected[0].get('tree') as MapTree;
         card.value = true;
         slide.value = 0;
         autoplay.value = true;
@@ -180,22 +176,18 @@ export default defineComponent({
         card.value = false;
       }
     };
-    const selectInteractionFilter = (feature: Feature): boolean => {
-      console.log('Filter');
-      console.log(feature.getProperties());
-      return true;
+    const selectInteractionFilter = (): boolean => {
+      return props.highlightedTreeId === undefined;
     };
     const fitToView = (): void => {
       if (mapTrees.value.length > 0 && view.value !== null)
         view.value.fit(new MultiPoint(mapTrees.value.map((tree) => tree.coordinates)), {
-          padding: [100, 100, 100, 100],
+          padding: [50, 50, 50, 50],
         });
     };
     watch(mapTrees, fitToView, { immediate: true });
     watch(view, fitToView, { immediate: true });
     watch(card, (newValue) => {
-      // funktioniert nicht
-      console.log(newValue);
       if (newValue === false) selectedMapTree.value = undefined;
     });
 

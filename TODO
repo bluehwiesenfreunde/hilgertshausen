@@ -1,19 +1,14 @@
-popup für tree
 page für tree
-pflückreife als integer
+pflückreife als Zahl
 ansicht was aktuell reif ist?
 passwort eingabe?
 seite für alle bäume einer art (apfel) ?
 startseite
 impressum
-table: anclicken eines baums
-table: zoom to baum
+table: anklicken eines baums
+table: focus Baum
 farben für sorten überdenken
 favicon?
-bilder für bäume
-select feature in karte ist kaputt
-
-brauchen wiesen ein polygon?
 
 projekte
 
@@ -24,5 +19,31 @@ vector karte
 npm run build geht nicht
 License file
 
-github action
-github org?
+Termine
+
+Github action
+
+- Aktiväten
+  - Baumschneiden
+  - Mähen
+  - Ampfer stechen
+  - Düngen
+  - Roden
+  - Stammtisch
+- Apfelfest
+  - 2022
+- Kinder
+  - Apfelsaft pressen
+  - Blühwiese anlegen
+  - Insektenhotel
+  - Arbeiten mit Pferd
+- Insektenhotels
+  - Skaterplatz
+- Blühwiesen
+  - Bürgermeister
+  - Bründelweg
+  - Osterfeuer
+  - Mannrieder Berg
+  - Gartelsried
+- Biotope
+  - Osterfeuer

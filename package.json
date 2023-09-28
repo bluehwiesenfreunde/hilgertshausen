@@ -38,6 +38,7 @@
     "vue3-openlayers": "^0.1.71"
   },
   "dependencies": {
-    "fuse.js": "^6.6.2"
+    "fuse.js": "^6.6.2",
+    "qrcode.vue": "^3.3.3"
   }
 }

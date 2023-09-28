@@ -9,10 +9,27 @@
       ".eslintrc.js",
       "vite.config.ts"],
   "compilerOptions": {
+    "composite": true,
+    "types": ["node"],
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+    "jsx": "preserve",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
     "baseUrl": ".",
+    "rootDir": "./src",
+    "outDir": "./lib",
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": ["src/*"]
+    },
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
   },
   "references": [
     {

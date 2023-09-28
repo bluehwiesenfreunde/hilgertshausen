@@ -4,8 +4,11 @@
     :rows="filteredTrees"
     :columns="columns"
     row-key="id"
-    :pagination="{ rowsPerPage: 30 }"
+    :pagination="{ rowsPerPage: 0 }"
+    hide-bottom
     :visible-columns="optionalColumns"
+    virtual-scroll
+    class="table"
   >
     <template v-slot:top>
       <div class="q-table__title">Bäume</div>
@@ -20,7 +23,11 @@
       <q-tr :props="props" @mouseenter="rowEnter(props.row.properties.id)" @mouseleave="rowLeft()">
         <q-td v-for="col in props.cols" :key="col.name" :props="props">
           <div v-if="col.name == 'id'">
-            <q-badge :color="getSpeciesColorByTreeId(col.value)" :label="col.value" />
+            <q-btn
+              :to="{ name: 'tree-details', params: { id: props.row.properties.id } }"
+              :color="getSpeciesColorByTreeId(col.value)"
+              :label="col.value"
+            />
           </div>
           <div v-else-if="col.name == 'orchard'">
             <q-btn
@@ -175,3 +182,17 @@ export default defineComponent({
   },
 });
 </script>
+<style lang="sass">
+.table
+  @media (min-width: $breakpoint-md-min)
+    height: calc(100vh - 50px - 350px - 20px - 50px - 30px)
+  .q-table__top,
+  thead tr:first-child th
+    /* bg color is important for th; just specify one */
+    background-color: #ffffff
+  thead tr th
+    position: sticky
+    z-index: 1
+  thead tr:first-child th
+    top: 0
+</style>

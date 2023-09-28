@@ -36,6 +36,11 @@ app.use(i18n);
 app.use(Quasar, {
   plugins: {},
   lang: quasarLang,
+  config: {
+    screen: {
+      bodyClasses: true,
+    },
+  },
 });
 app.use(OpenLayersMap);
 
