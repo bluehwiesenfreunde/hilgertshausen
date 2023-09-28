@@ -99,9 +99,11 @@
             </ol-style-text>
           </ol-style>
         </ol-feature>
+        <!--
         <ol-feature>
           <ol-geom-multi-polygon :coordinates="multiPolygon" />
         </ol-feature>
+        -->
       </ol-source-vector>
     </ol-vector-layer>
   </ol-map>

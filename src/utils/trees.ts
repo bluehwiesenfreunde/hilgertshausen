@@ -61,10 +61,8 @@ for (const tree of ALL_TREES.values()) {
 }
 
 export const getTreeImages = function (treeId: number | string | undefined): string[] {
-  console.log('foo', treeId);
   if (treeId === undefined) return [];
   const urls = images.get(typeof treeId === 'string' ? treeId : treeId.toString());
-  console.log(urls);
   return urls === undefined ? [] : urls;
 };
 

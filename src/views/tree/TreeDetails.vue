@@ -1,18 +1,26 @@
 <template>
   <TreeMap :trees="tree ? [tree] : []" :highlighted-tree-id="tree?.properties.id" />
-  <qrcode-vue
-    :value="`http://localhost:5173/#/streuobstwiesen/{{tree?.properties.id}}`"
-    :size="300"
+  <q-chip icon="tag" :label="tree?.properties.id" />
+  <q-chip
+    icon="mdi-tree"
+    :label="$t(`species.${getVarietyById(tree?.properties.variety_id)?.species}`)"
+    :color="getSpeciesColorByTreeId(tree?.properties.id as any)"
+  />
+  <q-chip
+    icon="mdi-information-outline"
+    :label="getVarietyById(tree?.properties.variety_id)?.name"
+    :color="getSpeciesColorByTreeId(tree?.properties.id as any)"
   />
 </template>
 
 <script lang="ts">
-import QrcodeVue from 'qrcode.vue';
 import { computed, defineComponent } from 'vue';
 
 import TreeMap from '@/components/TreeMap.vue';
 import type { Tree } from '@/models/Tree';
+import { getSpeciesColorByTreeId } from '@/utils/colors';
 import { ALL_TREES } from '@/utils/trees';
+import { getVarietyById } from '@/utils/varieties';
 
 export default defineComponent({
   props: {
@@ -20,7 +28,6 @@ export default defineComponent({
   },
   components: {
     TreeMap,
-    QrcodeVue,
   },
   setup(props) {
     const tree = computed<Tree | undefined>(() => {
@@ -36,6 +43,8 @@ export default defineComponent({
     return {
       trees,
       tree,
+      getVarietyById,
+      getSpeciesColorByTreeId,
     };
   },
 });

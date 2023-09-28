@@ -66,6 +66,18 @@ import { getSpeciesColorByTreeId } from '@/utils/colors';
 import { getOrchardById } from '@/utils/orchards';
 import { getVarietyById } from '@/utils/varieties';
 
+interface Column {
+  name: string;
+  required?: boolean;
+  label: string;
+  align: 'left' | 'right' | 'center';
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  field: string | ((row: any) => any);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  format?: (val: any, row: any) => any;
+  sortable: boolean;
+}
+
 export default defineComponent({
   props: {
     trees: {
@@ -81,12 +93,12 @@ export default defineComponent({
   setup(props, { emit }) {
     const { d, t } = useI18n();
     const filter = ref('');
-    const columns = [
+    const columns: Column[] = [
       {
         name: 'id',
         required: true,
-        align: 'left',
         label: t('tree.tree_id'),
+        align: 'left',
         field: (row: Tree): number => row.properties.id,
         sortable: true,
       },
@@ -127,6 +139,7 @@ export default defineComponent({
         label: t('tree.state'),
         align: 'left',
         field: (row: Tree): string => row.properties.state,
+        sortable: true,
       },
       {
         name: 'last_cut',

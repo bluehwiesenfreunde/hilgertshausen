@@ -1,5 +1,6 @@
 {
   "extends": "@vue/tsconfig/tsconfig.web.json",
+  "exclude": ["node_modules"],
   "include": [
       "env.d.ts",
       "src/**/*.json",
@@ -7,7 +8,7 @@
       "src/**/*.ts",
       "src/**/*.vue",
       ".eslintrc.js",
-      "vite.config.ts"],
+      ],
   "compilerOptions": {
     "composite": true,
     "types": ["node"],
@@ -24,16 +25,10 @@
     "resolveJsonModule": true,
     "sourceMap": true,
     "baseUrl": ".",
-    "rootDir": "./src",
     "outDir": "./lib",
     "paths": {
       "@/*": ["src/*"]
     },
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
-  },
-  "references": [
-    {
-      "path": "./tsconfig.config.json"
-    }
-  ]
+  }
 }
