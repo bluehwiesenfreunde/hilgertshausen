@@ -26,7 +26,9 @@ export const messages = {
     last_cut: 'Letzer Schnitt',
     last_fertilization: 'Letzte Düngung',
     ready_to_pick: 'Pflückreife',
+    ready_to_eat: 'Genussreife',
     no_image: 'Kein Bild vorhanden',
+    no_data: 'Keine Daten vorhanden',
   },
   views: {
     privacy_policy: {
