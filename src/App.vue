@@ -13,6 +13,7 @@
           flat
           icon="mdi-instagram"
           :label="$q.screen.gt.xs === true ? 'Instagram' : ''"
+          href="https://www.instagram.com/bluehwiesenfreunde/"
         />
         <q-btn
           dense
