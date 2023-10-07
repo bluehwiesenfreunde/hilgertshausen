@@ -1,13 +1,11 @@
 <template>
   <TreeMap :trees="tree ? [tree] : []" :highlighted-tree-id="tree?.properties.id" />
   <div class="shadow-2 content q-pa-md">
-    <div class="q-pa-sm">
-      <h3>
-        # {{ tree?.properties.id }}
-        {{ getVarietyById(tree?.properties.variety_id)?.name }}
-        ({{ $t(`species.${getVarietyById(tree?.properties.variety_id)?.species}`) }})
-      </h3>
-    </div>
+    <h6>
+      # {{ tree?.properties.id }}
+      {{ getVarietyById(tree?.properties.variety_id)?.name }}
+      ({{ $t(`species.${getVarietyById(tree?.properties.variety_id)?.species}`) }})
+    </h6>
     <div class="row">
       <div class="col-md-7 col-12">
         <q-list padding>
