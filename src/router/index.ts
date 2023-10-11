@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 
+import FotoChallenge from '@/views/FotoChallenge.vue';
 import LandingPage from '@/views/LandingPage.vue';
 import PrivacyPolicy from '@/views/PrivacyPolicy.vue';
 import OrchardDetails from '@/views/orchard/OrchardDetails.vue';
@@ -48,6 +49,11 @@ const router = createRouter({
       name: 'tree-details',
       component: TreeDetails,
       props: true,
+    },
+    {
+      path: '/fotowettbewerb/2025',
+      name: 'projects-foto-challenge-2025',
+      component: FotoChallenge,
     },
   ],
 });
