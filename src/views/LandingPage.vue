@@ -1,5 +1,9 @@
 <template>
-  <h6>{{ $t('page.title') }}</h6>
+  <div>
+    <center>
+      <q-img src="images/logo.png" width="80%" />
+    </center>
+  </div>
 
   Auf dieser Seite findest Du alle Informationen zu den Streuobstwiesen in Hilgertshausen.
   <ul>
