@@ -1,6 +1,8 @@
 <template>
   <div class="q-pa-md">
-    <q-img src="images/foto-challenge-2025.jpeg" />
+    <div style="text-align: center">
+      <q-img src="images/foto-challenge-2025.jpeg" width="600px" />
+    </div>
     <h6>Teilnahmebedingungen</h6>
     <b
       >Allgemeine Geschäftsbedingungen für die Teilnahme an dem Wettbewerb des Vereins für Gartenbau
@@ -32,7 +34,7 @@
         die Bilder ohne Einschränkungen zu nutzen. Die Teilnahme ist nur innerhalb des
         Teilnahmezeitraums möglich. Nach Teilnahmeschluss eingehende Einsendungen werden bei der
         Auslosung nicht berücksichtigt. Die Teilnahme am Wettbewerbs ist vom 15.10.2023 12:00 bis
-        zum 6.10.2024 23:59 möglich. Innerhalb dieses Zeitraums erhalten Nutzer die Möglichkeit, am
+        zum 30.09.2024 23:59 möglich. Innerhalb dieses Zeitraums erhalten Nutzer die Möglichkeit, am
         Wettbewerb teilzunehmen.
       </li>
       <li>
@@ -132,10 +134,16 @@
       <q-input
         filled
         v-model="name"
-        label="Vorname Nachname *"
-        hint="Vor- und Nachname"
+        label="Vorname"
         lazy-rules
-        :rules="[(val) => (val && val.length > 0) || 'Bitte geben Sie Ihren Namen ein']"
+        :rules="[(val) => (val && val.length > 0) || 'Bitte geben Sie Ihren Vornamen ein']"
+      />
+      <q-input
+        filled
+        v-model="surname"
+        label="Nachname"
+        lazy-rules
+        :rules="[(val) => (val && val.length > 0) || 'Bitte geben Sie Ihren Nachnamen ein']"
       />
 
       <q-toggle v-model="acceptConditions" label="Ich stimme den Teilnahmebedingungen zu" />
@@ -149,7 +157,10 @@
           :href="mailLink"
           color="primary"
           :disable="
-            acceptConditions === false || acceptDataProtection === false || name.length === 0
+            acceptConditions === false ||
+            acceptDataProtection === false ||
+            name.length === 0 ||
+            surname.length === 0
           "
         />
       </div>
@@ -163,20 +174,23 @@ import { computed, defineComponent, ref } from 'vue';
 export default defineComponent({
   setup() {
     const name = ref('');
+    const surname = ref('');
     const mailLink = computed<string>(() => {
       if (
         acceptConditions.value === false ||
         acceptDataProtection.value === false ||
+        surname.value.length === 0 ||
         name.value.length === 0
       )
         return '';
-      return `mailto:kalender@bluehwiesenfreunde.de?subject=Teilnahme Fotowettbewerb 2025 - ${name.value}&body=Hallo liebe Blühwiesenfreunde!%0D%0A%0D%0AHiermit nehme ich am Blühwiesenfreunde Fotowettbewerb für den Kalender 2025 teil.%0D%0AIch habe die Teilnahmebedingungen und die Datenschutzbestimmungen gelesen und stimme beiden zu.%0D%0A Anbei findet ihr meine Bilder für den Wettbewerb.%0D%0A%0D%0A--- Bitte die Bilder noch einfügen, Danke!`;
+      return `mailto:kalender@bluehwiesenfreunde.de?subject=Teilnahme Fotowettbewerb 2025 - ${name.value} ${surname.value}&body=Hallo liebe Blühwiesenfreunde!%0D%0A%0D%0AHiermit nehme ich am Blühwiesenfreunde Fotowettbewerb für den Kalender 2025 teil.%0D%0AIch habe die Teilnahmebedingungen und die Datenschutzbestimmungen gelesen und stimme beiden zu.%0D%0A Anbei findet ihr meine Bilder für den Wettbewerb.%0D%0A%0D%0A--- Bitte die Bilder noch einfügen, Danke!`;
     });
     const acceptConditions = ref(false);
     const acceptDataProtection = ref(false);
 
     return {
       name,
+      surname,
       acceptConditions,
       acceptDataProtection,
       mailLink,
