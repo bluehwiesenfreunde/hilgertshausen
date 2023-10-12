@@ -6,6 +6,7 @@ import PrivacyPolicy from '@/views/PrivacyPolicy.vue';
 import OrchardDetails from '@/views/orchard/OrchardDetails.vue';
 import OrchardList from '@/views/orchard/OrchardList.vue';
 import TreeDetails from '@/views/tree/TreeDetails.vue';
+import TreeList from '@/views/tree/TreeList.vue';
 import VarietyDetails from '@/views/variety/VarietyDetails.vue';
 //import VarietyList from '@/views/species/VarietyList.vue';
 
@@ -53,6 +54,11 @@ const router = createRouter({
       name: 'tree-details',
       component: TreeDetails,
       props: true,
+    },
+    {
+      path: '/baume/',
+      name: 'tree-list',
+      component: TreeList,
     },
     {
       path: '/fotowettbewerb/2025',

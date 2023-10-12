@@ -6,6 +6,10 @@
       {{ getVarietyById(tree?.properties.variety_id)?.name }}
       ({{ $t(`species.${getVarietyById(tree?.properties.variety_id)?.species}`) }})
     </h6>
+    <qrcode-vue
+      :value="`http://localhost:5173/#/streuobstwiesen/{{tree?.properties.id}}`"
+      :size="300"
+    />
     <div class="row">
       <div class="col-md-7 col-12">
         <q-list padding>
@@ -145,6 +149,7 @@
 </template>
 
 <script lang="ts">
+import QrcodeVue from 'qrcode.vue';
 import { computed, defineComponent, ref } from 'vue';
 
 import TreeMap from '@/components/TreeMap.vue';
@@ -160,6 +165,7 @@ export default defineComponent({
   },
   components: {
     TreeMap,
+    QrcodeVue,
   },
   setup(props) {
     const tree = computed<Tree | undefined>(() => {
