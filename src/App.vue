@@ -95,7 +95,6 @@
               </q-card>
             </q-expansion-item>
           </q-expansion-item>
-          <!--
           <q-expansion-item
             group="main"
             :label="$t('views.projects.link')"
@@ -106,20 +105,14 @@
           >
             <q-card>
               <q-list>
-                <q-item>
+                <q-item :to="{ name: 'projects-foto-challenge-2025' }">
                   <q-item-section>
-                    <q-item-label>Test</q-item-label>
-                  </q-item-section>
-                </q-item>
-                <q-item>
-                  <q-item-section>
-                    <q-item-label>Test 2</q-item-label>
+                    <q-item-label>Fotowettbewerb 2025</q-item-label>
                   </q-item-section>
                 </q-item>
               </q-list>
             </q-card>
           </q-expansion-item>
-        -->
         </q-list>
       </q-scroll-area>
     </q-drawer>
@@ -173,7 +166,7 @@ export default defineComponent({
         expansionState.value = [
           route.name?.toString().startsWith('orchard') === true,
           route.name?.toString().startsWith('variety') === true,
-          false,
+          route.name?.toString().startsWith('projects') === true,
         ];
         if (route.name?.toString() !== 'variety-details') {
           for (const speciesInfo of speciesMap.value.values()) speciesInfo.expansionState = false;
