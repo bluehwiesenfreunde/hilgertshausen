@@ -34,7 +34,7 @@
         die Bilder ohne Einschränkungen zu nutzen. Die Teilnahme ist nur innerhalb des
         Teilnahmezeitraums möglich. Nach Teilnahmeschluss eingehende Einsendungen werden bei der
         Auslosung nicht berücksichtigt. Die Teilnahme am Wettbewerbs ist vom 15.10.2023 12:00 bis
-        zum 30.09.2024 23:59 möglich. Innerhalb dieses Zeitraums erhalten Nutzer die Möglichkeit, am
+        zum 1.09.2024 00:00 möglich. Innerhalb dieses Zeitraums erhalten Nutzer die Möglichkeit, am
         Wettbewerb teilzunehmen.
       </li>
       <li>

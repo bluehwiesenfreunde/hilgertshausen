@@ -52,7 +52,11 @@
                 Streuobstwiesen.
                 <br />
                 <br />
-                <q-btn color="primary" label="Hier erfährst du mehr"></q-btn>
+                <q-btn
+                  :to="{ name: 'projects-foto-challenge-2025' }"
+                  color="primary"
+                  label="Hier erfährst du mehr"
+                ></q-btn>
               </div>
             </q-card-section>
           </q-card-section>
