@@ -95,6 +95,7 @@
               </q-card>
             </q-expansion-item>
           </q-expansion-item>
+          <!--
           <q-expansion-item
             group="main"
             :label="$t('views.projects.link')"
@@ -113,6 +114,20 @@
               </q-list>
             </q-card>
           </q-expansion-item>
+        -->
+          <q-item
+            header-class="text-primary text-weight-bold"
+            icon="mdi-map"
+            :content-inset-level="1"
+            :to="{ name: 'projects-foto-challenge-2025' }"
+          >
+            <q-item-section avatar>
+              <q-icon color="primary" name="photo" />
+            </q-item-section>
+            <q-item-section>
+              <q-item-label class="text-primary text-weight-bold">Fotowettbewerb 2025</q-item-label>
+            </q-item-section>
+          </q-item>
         </q-list>
       </q-scroll-area>
     </q-drawer>
@@ -128,6 +143,7 @@
 </template>
 
 <script lang="ts">
+import { useQuasar } from 'quasar';
 import { defineComponent, ref, watch } from 'vue';
 import { RouterView, useRoute } from 'vue-router';
 
@@ -147,8 +163,9 @@ export default defineComponent({
     'router-view': RouterView,
   },
   setup() {
+    const $q = useQuasar();
     const route = useRoute();
-    const drawerLeft = ref(true);
+    const drawerLeft = ref($q.platform.is.desktop);
     const expansionState = ref([false, false, false]);
     const speciesMap = ref<Map<Species, SpeciesInfo>>(new Map());
     VARIETIES_BY_SPECIES.forEach((varieties, species) => {

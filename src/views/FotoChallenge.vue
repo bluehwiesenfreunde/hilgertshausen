@@ -1,7 +1,7 @@
 <template>
-  <div class="q-pa-md">
+  <div class="q-pa-sm">
     <div style="text-align: center">
-      <q-img src="images/foto-challenge-2025.jpeg" width="600px" />
+      <q-img src="images/foto-challenge-2025.jpeg" style="max-width: 600px" />
     </div>
     <h6>Teilnahmebedingungen</h6>
     <b
@@ -129,41 +129,48 @@
       </li>
     </ol>
 
-    <h6>Jetzt Teilnehmen</h6>
-    <q-form class="q-gutter-md">
-      <q-input
-        filled
-        v-model="name"
-        label="Vorname"
-        lazy-rules
-        :rules="[(val) => (val && val.length > 0) || 'Bitte geben Sie Ihren Vornamen ein']"
-      />
-      <q-input
-        filled
-        v-model="surname"
-        label="Nachname"
-        lazy-rules
-        :rules="[(val) => (val && val.length > 0) || 'Bitte geben Sie Ihren Nachnamen ein']"
-      />
-
-      <q-toggle v-model="acceptConditions" label="Ich stimme den Teilnahmebedingungen zu" />
-      <q-toggle v-model="acceptDataProtection" label="Ich stimme den Datenschutzbestimmungen zu" />
-
-      <div>
-        <q-btn
-          label="Weiter"
-          type="submit"
-          target="new"
-          :href="mailLink"
-          color="primary"
-          :disable="
-            acceptConditions === false ||
-            acceptDataProtection === false ||
-            name.length === 0 ||
-            surname.length === 0
-          "
+    <h6 class="q-pa-sm">Jetzt Teilnehmen</h6>
+    <q-form class="q-gutter-md q-pa-sm">
+      <div style="max-width: 400px">
+        <q-input
+          filled
+          v-model="name"
+          label="Vorname"
+          lazy-rules
+          :rules="[(val) => (val && val.length > 0) || 'Bitte geben Sie Ihren Vornamen ein']"
+        />
+        <q-input
+          filled
+          v-model="surname"
+          label="Nachname"
+          lazy-rules
+          :rules="[(val) => (val && val.length > 0) || 'Bitte geben Sie Ihren Nachnamen ein']"
         />
       </div>
+
+      <div>
+        <q-toggle v-model="acceptConditions" label="Ich stimme den Teilnahmebedingungen zu" />
+      </div>
+      <div>
+        <q-toggle
+          v-model="acceptDataProtection"
+          label="Ich stimme den Datenschutzbestimmungen zu"
+        />
+      </div>
+
+      <q-btn
+        label="Weiter"
+        type="submit"
+        target="new"
+        :href="mailLink"
+        color="primary"
+        :disable="
+          acceptConditions === false ||
+          acceptDataProtection === false ||
+          name.length === 0 ||
+          surname.length === 0
+        "
+      />
     </q-form>
   </div>
 </template>

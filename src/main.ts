@@ -8,6 +8,7 @@ import 'vue3-openlayers/dist/vue3-openlayers.css';
 import '@quasar/extras/material-icons/material-icons.css';
 import 'quasar/src/css/index.sass';
 import '@quasar/extras/mdi-v6/mdi-v6.css';
+import 'quasar/src/css/flex-addon.sass';
 import '@/main.css';
 
 import App from '@/App.vue';
