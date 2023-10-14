@@ -110,6 +110,7 @@
           </q-expansion-item>
         -->
           <q-item
+            style="margin-bottom: 3em"
             header-class="text-primary text-weight-bold"
             icon="mdi-map"
             :content-inset-level="1"
