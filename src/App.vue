@@ -168,7 +168,7 @@ export default defineComponent({
   setup() {
     const $q = useQuasar();
     const route = useRoute();
-    const drawerLeft = ref($q.platform.is.desktop);
+    const drawerLeft = ref($q.screen.gt.md);
     const expansionState = ref([false, false, false]);
     const speciesMap = ref<Map<Species, SpeciesInfo>>(new Map());
     VARIETIES_BY_SPECIES.forEach((varieties, species) => {

@@ -42,7 +42,7 @@
       </div>
       <div class="col-12 col-md-4 q-py-md">
         <q-card flat bordered>
-          <q-card-section horizontal>
+          <q-card-section :horizontal="$q.screen.gt.md">
             <q-img class="col-6" src="images/foto-challenge-2025.jpeg" />
             <q-card-section>
               <div class="text-h6">Mitmachen und gewinnen</div>
