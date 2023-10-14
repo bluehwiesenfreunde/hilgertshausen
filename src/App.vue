@@ -122,6 +122,16 @@
               <q-item-label class="text-primary text-weight-bold">Fotowettbewerb 2025</q-item-label>
             </q-item-section>
           </q-item>
+          <q-item class="text-secondary absolute-bottom" :to="{ name: 'privacy-policy' }">
+            <q-item-section avatar>
+              <q-icon color="secondary" name="info" />
+            </q-item-section>
+            <q-item-section>
+              <q-item-label class="text-secondary text-weight-bold">
+                {{ $t('views.privacy_policy.link') }}
+              </q-item-label>
+            </q-item-section>
+          </q-item>
         </q-list>
       </q-scroll-area>
     </q-drawer>
@@ -130,15 +140,6 @@
       <!--<q-scroll-area style="height: calc(100vh - 50px)">-->
       <q-page padding>
         <router-view />
-        <div style="text-align: center">
-          <q-btn
-            dense
-            color="secondary"
-            flat
-            :label="$t('views.privacy_policy.link')"
-            :to="{ name: 'privacy-policy' }"
-          />
-        </div>
       </q-page>
       <!--</q-scroll-area>-->
     </q-page-container>
