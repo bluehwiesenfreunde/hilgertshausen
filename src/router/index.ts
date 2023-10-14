@@ -11,6 +11,10 @@ import VarietyDetails from '@/views/variety/VarietyDetails.vue';
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
+  scrollBehavior() {
+    // always scroll to top
+    return { top: 0 };
+  },
   routes: [
     {
       path: '/',
