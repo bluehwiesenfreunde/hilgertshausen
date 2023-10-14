@@ -12,14 +12,8 @@
           dense
           flat
           icon="mdi-instagram"
-          :label="$q.screen.gt.xs === true ? 'Instagram' : ''"
+          label="Instagram"
           href="https://www.instagram.com/bluehwiesenfreunde/"
-        />
-        <q-btn
-          dense
-          flat
-          :label="$t('views.privacy_policy.link')"
-          :to="{ name: 'privacy-policy' }"
         />
       </q-toolbar>
     </q-header>
@@ -136,6 +130,15 @@
       <!--<q-scroll-area style="height: calc(100vh - 50px)">-->
       <q-page padding>
         <router-view />
+        <div style="text-align: center">
+          <q-btn
+            dense
+            color="secondary"
+            flat
+            :label="$t('views.privacy_policy.link')"
+            :to="{ name: 'privacy-policy' }"
+          />
+        </div>
       </q-page>
       <!--</q-scroll-area>-->
     </q-page-container>
