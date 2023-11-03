@@ -12,7 +12,10 @@
           <q-card-section>
             Wir sind eine lose Gruppe von Naturschutzinteressierten in Hilgertshausen, die sich
             ehrenamtlich um die gemeindlichen Streuobstwiesen und Bäume kümmert. Da wir kein Verein
-            sind, haben wir eine Zusammenarbeit mit dem Gartenbauverein Hilgertshausen
+            sind, haben wir eine Zusammenarbeit mit dem
+            <a href="https://www.gartenbauverein-hilgertshausen.de">
+              Gartenbauverein Hilgertshausen
+            </a>
             vereinbart.<br />
             Folge uns auf Instagram um mehr über unsere Aktionen und Veranstaltungen zu erfahren.
             <br /><br />
@@ -71,3 +74,8 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({});
 </script>
+
+<style lang="sass">
+a
+  color: $primary
+</style>
