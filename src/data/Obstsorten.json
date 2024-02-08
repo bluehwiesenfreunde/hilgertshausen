@@ -427,6 +427,17 @@
     "Lagerfaehigkeit": "bis Mai",
     "Allergiker": "",
     "urls": ["https://de.wikipedia.org/wiki/Gloster_(Apfel)"]
+  }{
+    "Art": "Apfel",
+    "id": 31,
+    "Sorte": "Ontario",
+    "Pflueckreife": "Mitte Oktober - Mitte November",
+    "Genussreife": "Januar - Mai",
+    "Verwendung": "hoher Vitamin C Gehalt",
+    "Geschmack": "säuerlich",
+    "Lagerfaehigkeit": "bis Mai",
+    "Allergiker": "",
+    "urls": ["https://de.wikipedia.org/wiki/Ontarioapfel"]
   },
   {
     "Art": "Apfel",
