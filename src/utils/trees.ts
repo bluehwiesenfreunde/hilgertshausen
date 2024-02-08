@@ -24,7 +24,7 @@ _converted_data.sort((a, b) => a.properties.Baum_Nr - b.properties.Baum_Nr);
 
 const parseDate = function (input: string | null): Date | undefined {
   if (input === null) return undefined;
-  const [year, month, day] = input.split('/');
+  const [year, month, day] = input.replaceAll('-', '/').split('/');
   return new Date(parseInt(year, 10), parseInt(month, 10), parseInt(day, 10));
 };
 
