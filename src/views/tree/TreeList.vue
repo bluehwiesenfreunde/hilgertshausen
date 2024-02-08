@@ -4,17 +4,24 @@
       class="cold-6"
       v-for="(tree, index) in trees"
       :key="index"
-      style="padding: 10px; text-align: center"
+      style="
+        padding: 0.1cm;
+        text-align: center;
+        width: 8cm;
+        height: 8cm;
+        border: 1px solid #000000;
+        break-inside: avoid;
+      "
     >
-      <h6>
+      <span style="font-size: 0.775cm; line-height: 0.9cm">
         <b>{{ tree.properties.id }}</b
         ><br />
-        <b>{{ getVarietyName(tree) }}</b>
-      </h6>
+        <b>{{ getVarietyName(tree) }}</b> </span
+      ><br /><br />
       <qrcode-vue
         render-as="svg"
         :value="`https://bluehwiesenfreunde.de/#/baum/${tree.properties.id}`"
-        :size="250"
+        :size="200"
       />
     </div>
   </div>
