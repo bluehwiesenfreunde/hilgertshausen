@@ -9,11 +9,11 @@
         text-align: center;
         width: 8cm;
         height: 8cm;
-        border: 1px solid #000000;
+        border: 1px dashed #eeeeee;
         break-inside: avoid;
       "
     >
-      <span style="font-size: 0.775cm; line-height: 0.9cm">
+      <span style="font-size: 0.77cm; line-height: 0.9cm">
         <b>{{ tree.properties.id }}</b
         ><br />
         <b>{{ getVarietyName(tree) }}</b> </span

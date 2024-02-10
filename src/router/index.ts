@@ -56,7 +56,7 @@ const router = createRouter({
       props: true,
     },
     {
-      path: '/baume/',
+      path: '/baeume/',
       name: 'tree-list',
       component: TreeList,
     },
