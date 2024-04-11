@@ -25,7 +25,7 @@ _converted_data.sort((a, b) => a.properties.Baum_Nr - b.properties.Baum_Nr);
 const parseDate = function (input: string | null): Date | undefined {
   if (input === null) return undefined;
   const [year, month, day] = input.replaceAll('-', '/').split('/');
-  return new Date(parseInt(year, 10), parseInt(month, 10), parseInt(day, 10));
+  return new Date(parseInt(year, 10), parseInt(month, 10) - 1, parseInt(day, 10));
 };
 
 export const ALL_TREES: Map<number, Tree> = new Map(
