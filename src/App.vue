@@ -89,40 +89,6 @@
               </q-card>
             </q-expansion-item>
           </q-expansion-item>
-          <!--
-          <q-expansion-item
-            group="main"
-            :label="$t('views.projects.link')"
-            header-class="text-primary text-weight-bold"
-            icon="mdi-text-box"
-            :content-inset-level="1"
-            :default-opened="expansionState[2]"
-          >
-            <q-card>
-              <q-list>
-                <q-item :to="{ name: 'projects-foto-challenge-2025' }">
-                  <q-item-section>
-                    <q-item-label>Fotowettbewerb 2025</q-item-label>
-                  </q-item-section>
-                </q-item>
-              </q-list>
-            </q-card>
-          </q-expansion-item>
-        -->
-          <q-item
-            style="margin-bottom: 3em"
-            header-class="text-primary text-weight-bold"
-            icon="mdi-map"
-            :content-inset-level="1"
-            :to="{ name: 'projects-foto-challenge-2025' }"
-          >
-            <q-item-section avatar>
-              <q-icon color="primary" name="photo" />
-            </q-item-section>
-            <q-item-section>
-              <q-item-label class="text-primary text-weight-bold">Fotowettbewerb 2025</q-item-label>
-            </q-item-section>
-          </q-item>
           <q-item class="text-secondary absolute-bottom" :to="{ name: 'privacy-policy' }">
             <q-item-section avatar>
               <q-icon color="secondary" name="info" />
