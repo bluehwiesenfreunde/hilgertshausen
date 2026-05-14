@@ -48,9 +48,9 @@
   </div>
 
   <div>
-    <h1>Datenschutz&shy;erkl&auml;rung</h1>
-    <h2>1. Datenschutz auf einen Blick</h2>
-    <h3>Allgemeine Hinweise</h3>
+    <h4>Datenschutz&shy;erkl&auml;rung</h4>
+    <h5>1. Datenschutz auf einen Blick</h5>
+    <h6>Allgemeine Hinweise</h6>
     <p>
       Die folgenden Hinweise geben einen einfachen &Uuml;berblick dar&uuml;ber, was mit Ihren
       personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind
@@ -58,14 +58,14 @@
       Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgef&uuml;hrten
       Datenschutzerkl&auml;rung.
     </p>
-    <h3>Datenerfassung auf dieser Website</h3>
-    <h4>Wer ist verantwortlich f&uuml;r die Datenerfassung auf dieser Website?</h4>
+    <h6>Datenerfassung auf dieser Website</h6>
+    <h6>Wer ist verantwortlich f&uuml;r die Datenerfassung auf dieser Website?</h6>
     <p>
       Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen
       Kontaktdaten k&ouml;nnen Sie dem Abschnitt &bdquo;Hinweis zur Verantwortlichen Stelle&ldquo;
       in dieser Datenschutzerkl&auml;rung entnehmen.
     </p>
-    <h4>Wie erfassen wir Ihre Daten?</h4>
+    <h6>Wie erfassen wir Ihre Daten?</h6>
     <p>
       Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es
       sich z.&nbsp;B. um Daten handeln, die Sie in ein Kontaktformular eingeben.
@@ -76,7 +76,7 @@
       Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt
       automatisch, sobald Sie diese Website betreten.
     </p>
-    <h4>Wof&uuml;r nutzen wir Ihre Daten?</h4>
+    <h6>Wof&uuml;r nutzen wir Ihre Daten?</h6>
     <p>
       Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu
       gew&auml;hrleisten. Andere Daten k&ouml;nnen zur Analyse Ihres Nutzerverhaltens verwendet
@@ -84,7 +84,7 @@
       k&ouml;nnen, werden die &uuml;bermittelten Daten auch f&uuml;r Vertragsangebote, Bestellungen
       oder sonstige Auftragsanfragen verarbeitet.
     </p>
-    <h4>Welche Rechte haben Sie bez&uuml;glich Ihrer Daten?</h4>
+    <h6>Welche Rechte haben Sie bez&uuml;glich Ihrer Daten?</h6>
     <p>
       Sie haben jederzeit das Recht, unentgeltlich Auskunft &uuml;ber Herkunft, Empf&auml;nger und
       Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben au&szlig;erdem ein
@@ -99,7 +99,7 @@
       Hierzu sowie zu weiteren Fragen zum Thema Datenschutz k&ouml;nnen Sie sich jederzeit an uns
       wenden.
     </p>
-    <h3>Analyse-Tools und Tools von Dritt&shy;anbietern</h3>
+    <h6>Analyse-Tools und Tools von Dritt&shy;anbietern</h6>
     <p>
       Beim Besuch dieser Website kann Ihr Surf-Verhalten statistisch ausgewertet werden. Das
       geschieht vor allem mit sogenannten Analyseprogrammen.
@@ -108,9 +108,11 @@
       Detaillierte Informationen zu diesen Analyseprogrammen finden Sie in der folgenden
       Datenschutzerkl&auml;rung.
     </p>
-    <h2>2. Hosting</h2>
+
+    <h5>2. Hosting</h5>
     <p>Wir hosten die Inhalte unserer Website bei folgenden Anbietern:</p>
-    <h3>Strato</h3>
+
+    <h6>Strato</h6>
     <p>
       Anbieter ist die Strato AG, Otto-Ostrowski-Stra&szlig;e 7, 10249 Berlin (nachfolgend
       &bdquo;Strato&ldquo;). Wenn Sie unsere Website besuchen, erfasst Strato verschiedene Logfiles
@@ -132,7 +134,7 @@
       Einwilligung ist jederzeit widerrufbar.
     </p>
 
-    <h3>Externes Hosting</h3>
+    <h6>Externes Hosting</h6>
     <p>
       Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website
       erfasst werden, werden auf den Servern des Hosters / der Hoster gespeichert. Hierbei kann es
@@ -158,8 +160,9 @@
     <p>Wir setzen folgende(n) Hoster ein:</p>
     <p>github.com</p>
 
-    <h2>3. Allgemeine Hinweise und Pflicht&shy;informationen</h2>
-    <h3>Datenschutz</h3>
+    <h5>3. Allgemeine Hinweise und Pflicht&shy;informationen</h5>
+
+    <h6>Datenschutz</h6>
     <p>
       Die Betreiber dieser Seiten nehmen den Schutz Ihrer pers&ouml;nlichen Daten sehr ernst. Wir
       behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen
@@ -178,7 +181,7 @@
       der Daten vor dem Zugriff durch Dritte ist nicht m&ouml;glich.
     </p>
 
-    <h3>Hinweis zur verantwortlichen Stelle</h3>
+    <h6>Hinweis zur verantwortlichen Stelle</h6>
     <p>Die verantwortliche Stelle f&uuml;r die Datenverarbeitung auf dieser Website ist:</p>
     <p>
       Verein f&uuml;r Gartenbau und Landschaftspflege Hilgertshausen e.V.<br />
@@ -195,7 +198,7 @@
       Daten (z.&nbsp;B. Namen, E-Mail-Adressen o. &Auml;.) entscheidet.
     </p>
 
-    <h3>Speicherdauer</h3>
+    <h6>Speicherdauer</h6>
     <p>
       Soweit innerhalb dieser Datenschutzerkl&auml;rung keine speziellere Speicherdauer genannt
       wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck f&uuml;r die
@@ -207,7 +210,7 @@
       Gr&uuml;nde.
     </p>
 
-    <h3>Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser Website</h3>
+    <h6>Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser Website</h6>
     <p>
       Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir Ihre personenbezogenen
       Daten auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO bzw. Art. 9 Abs. 2 lit. a DSGVO, sofern
@@ -227,7 +230,7 @@
       Datenschutzerkl&auml;rung informiert.
     </p>
 
-    <h3>Empf&auml;nger von personenbezogenen Daten</h3>
+    <h6>Empf&auml;nger von personenbezogenen Daten</h6>
     <p>
       Im Rahmen unserer Gesch&auml;ftst&auml;tigkeit arbeiten wir mit verschiedenen externen Stellen
       zusammen. Dabei ist teilweise auch eine &Uuml;bermittlung von personenbezogenen Daten an diese
@@ -241,7 +244,7 @@
       Verarbeitung wird ein Vertrag &uuml;ber gemeinsame Verarbeitung geschlossen.
     </p>
 
-    <h3>Widerruf Ihrer Einwilligung zur Datenverarbeitung</h3>
+    <h6>Widerruf Ihrer Einwilligung zur Datenverarbeitung</h6>
     <p>
       Viele Datenverarbeitungsvorg&auml;nge sind nur mit Ihrer ausdr&uuml;cklichen Einwilligung
       m&ouml;glich. Sie k&ouml;nnen eine bereits erteilte Einwilligung jederzeit widerrufen. Die
@@ -249,10 +252,10 @@
       unber&uuml;hrt.
     </p>
 
-    <h3>
+    <h6>
       Widerspruchsrecht gegen die Datenerhebung in besonderen F&auml;llen sowie gegen Direktwerbung
       (Art. 21 DSGVO)
-    </h3>
+    </h6>
     <p>
       WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F DSGVO ERFOLGT, HABEN
       SIE JEDERZEIT DAS RECHT, AUS GR&Uuml;NDEN, DIE SICH AUS IHRER BESONDEREN SITUATION ERGEBEN,
@@ -266,7 +269,7 @@
       RECHTSANSPR&Uuml;CHEN (WIDERSPRUCH NACH ART. 21 ABS. 1 DSGVO).
     </p>
 
-    <h3>Beschwerde&shy;recht bei der zust&auml;ndigen Aufsichts&shy;beh&ouml;rde</h3>
+    <h6>Beschwerde&shy;recht bei der zust&auml;ndigen Aufsichts&shy;beh&ouml;rde</h6>
     <p>
       Im Falle von Verst&ouml;&szlig;en gegen die DSGVO steht den Betroffenen ein Beschwerderecht
       bei einer Aufsichtsbeh&ouml;rde, insbesondere in dem Mitgliedstaat ihres gew&ouml;hnlichen
@@ -275,7 +278,7 @@
       Rechtsbehelfe.
     </p>
 
-    <h3>Recht auf Daten&shy;&uuml;bertrag&shy;barkeit</h3>
+    <h6>Recht auf Daten&shy;&uuml;bertrag&shy;barkeit</h6>
     <p>
       Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erf&uuml;llung
       eines Vertrags automatisiert verarbeiten, an sich oder an einen Dritten in einem
@@ -284,7 +287,7 @@
       soweit es technisch machbar ist.
     </p>
 
-    <h3>Auskunft, Berichtigung und L&ouml;schung</h3>
+    <h6>Auskunft, Berichtigung und L&ouml;schung</h6>
     <p>
       Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf
       unentgeltliche Auskunft &uuml;ber Ihre gespeicherten personenbezogenen Daten, deren Herkunft
@@ -293,7 +296,7 @@
       Daten k&ouml;nnen Sie sich jederzeit an uns wenden.
     </p>
 
-    <h3>Recht auf Einschr&auml;nkung der Verarbeitung</h3>
+    <h6>Recht auf Einschr&auml;nkung der Verarbeitung</h6>
     <p>
       Sie haben das Recht, die Einschr&auml;nkung der Verarbeitung Ihrer personenbezogenen Daten zu
       verlangen. Hierzu k&ouml;nnen Sie sich jederzeit an uns wenden. Das Recht auf
@@ -333,7 +336,7 @@
       verarbeitet werden.
     </p>
 
-    <h3>SSL- bzw. TLS-Verschl&uuml;sselung</h3>
+    <h6>SSL- bzw. TLS-Verschl&uuml;sselung</h6>
     <p>
       Diese Seite nutzt aus Sicherheitsgr&uuml;nden und zum Schutz der &Uuml;bertragung
       vertraulicher Inhalte, wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als
@@ -346,8 +349,9 @@
       uns &uuml;bermitteln, nicht von Dritten mitgelesen werden.
     </p>
 
-    <h2>4. Datenerfassung auf dieser Website</h2>
-    <h3>Anfrage per E-Mail, Telefon oder Telefax</h3>
+    <h5>4. Datenerfassung auf dieser Website</h5>
+
+    <h6>Anfrage per E-Mail, Telefon oder Telefax</h6>
     <p>
       Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre Anfrage inklusive aller
       daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres
@@ -371,8 +375,9 @@
       Aufbewahrungsfristen &ndash; bleiben unber&uuml;hrt.
     </p>
 
-    <h2>5. Soziale Medien</h2>
-    <h3>Instagram</h3>
+    <h5>5. Soziale Medien</h5>
+
+    <h6>Instagram</h6>
     <p>
       Auf dieser Website sind Funktionen des Dienstes Instagram eingebunden. Diese Funktionen werden
       angeboten durch die Meta Platforms Ireland Limited, Merrion Road, Dublin 4, D04 X2K5, Irland.
@@ -463,8 +468,9 @@
       >.
     </p>
 
-    <h2>6. Newsletter</h2>
-    <h3>Newsletter&shy;daten</h3>
+    <h5>6. Newsletter</h5>
+
+    <h6>Newsletter&shy;daten</h6>
     <p>
       Wenn Sie den auf der Website angebotenen Newsletter beziehen m&ouml;chten, ben&ouml;tigen wir
       von Ihnen eine E-Mail-Adresse sowie Informationen, welche uns die &Uuml;berpr&uuml;fung
@@ -504,8 +510,9 @@
       >
     </p>
 
-    <h2>7. Plugins und Tools</h2>
-    <h3>OpenStreetMap</h3>
+    <h5>7. Plugins und Tools</h5>
+
+    <h6>OpenStreetMap</h6>
     <p>Wir nutzen den Kartendienst von OpenStreetMap (OSM).</p>
     <p>
       Wir binden OpenStreetMap auf unserem eigenen (Tile-)Server ein. Beim Aufruf des
