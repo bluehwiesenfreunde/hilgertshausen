@@ -33,8 +33,10 @@
 
       <dt>Redaktionell verantwortlich</dt>
       <dd>
-        Verantwortlich für den redaktionellen Inhalt dieser Seiten: 1. Vorsitzende Michelle Grimm.<br />
-        Verantwortlich für den redaktionellen Inhalt der Instagram Accounts: 2. Vorsitzender Günther Grimm.
+        Verantwortlich für den redaktionellen Inhalt dieser Seiten: 1. Vorsitzende Michelle
+        Grimm.<br />
+        Verantwortlich für den redaktionellen Inhalt der Instagram Accounts: 2. Vorsitzender Günther
+        Grimm.
       </dd>
 
       <dt>Verbraucherstreitbeilegung / Universalschlichtungsstelle</dt>
