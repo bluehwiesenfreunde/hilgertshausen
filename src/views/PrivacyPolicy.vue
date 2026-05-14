@@ -37,22 +37,21 @@
 
     <dt>Redaktionell verantwortlich</dt>
     <dd>
-      Michelle Grimm (1. Vorsitzende) – redaktionell verantwortlich für diese
-      Website.<br />
-      Günther Grimm (2. Vorsitzender) – redaktionell verantwortlich für die
-      Instagram-Accounts.
+      Michelle Grimm (1. Vorsitzende) – Website<br />
+      Günther Grimm (2. Vorsitzender) – Instagram
     </dd>
 
-    <dt>Verbraucherstreitbeilegung / Universalschlichtungsstelle</dt>
+    <dt>Verbraucherstreitbeilegung</dt>
     <dd>
-      Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor
-      einer Verbraucherschlichtungsstelle teilzunehmen.
+      Wir sind nicht bereit oder verpflichtet, an
+      Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
+      teilzunehmen.
     </dd>
   </dl>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue'
 
-export default defineComponent({});
+export default defineComponent({})
 </script>
