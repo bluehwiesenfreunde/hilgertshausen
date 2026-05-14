@@ -188,8 +188,7 @@
     </p>
 
     <p>
-      Telefon: &#91;Telefonnummer der verantwortlichen Stelle&#93;<br />
-      E-Mail: kontakt@gartenbauverein-hilgertshausen.de
+       E-Mail: kontakt@gartenbauverein-hilgertshausen.de
     </p>
 
     <p>
