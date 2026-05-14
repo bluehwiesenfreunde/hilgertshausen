@@ -187,9 +187,7 @@
       86567 Hilgertshausen-Tandern
     </p>
 
-    <p>
-       E-Mail: kontakt@gartenbauverein-hilgertshausen.de
-    </p>
+    <p>E-Mail: kontakt@gartenbauverein-hilgertshausen.de</p>
 
     <p>
       Verantwortliche Stelle ist die nat&uuml;rliche oder juristische Person, die allein oder
