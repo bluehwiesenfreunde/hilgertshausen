@@ -1,57 +1,53 @@
 <template>
-  <h4>Impressum</h4>
+  <div>
+    <h4>Impressum</h4>
 
-  <h5>Verein für Gartenbau und Landschaftspflege Hilgertshausen e.V.</h5>
+    <dl>
+      <dt>Verein</dt>
+      <dd>
+        Verein für Gartenbau und Landschaftspflege Hilgertshausen e.V.<br />
+        c/o Michelle Grimm<br />
+        Sommerstraße 11<br />
+        86567 Hilgertshausen-Tandern
+      </dd>
 
-  <dl>
-    <dt>Adresse</dt>
-    <dd>
-      c/o Michelle Grimm<br />
-      Sommerstraße 11<br />
-      86567 Hilgertshausen-Tandern
-    </dd>
+      <dt>Vereinsregister</dt>
+      <dd>VR 205383</dd>
 
-    <dt>Vereinsregister</dt>
-    <dd>VR 205383<br />Registergericht: Amtsgericht München</dd>
+      <dt>Registergericht</dt>
+      <dd>Amtsgericht München</dd>
 
-    <dt>Vertreten durch</dt>
-    <dd>
-      Michelle Grimm (1. Vorsitzende)<br />
-      Günther Grimm (2. Vorsitzender)
-    </dd>
+      <dt>Vertreten durch</dt>
+      <dd>
+        Michelle Grimm (1. Vorsitzender)<br />
+        Günther Grimm (2. Vorsitzender)
+      </dd>
 
-    <dt>Kontakt</dt>
-    <dd>
-      E-Mail:
-      <a href="mailto:kontakt@gartenbauverein-hilgertshausen.de">
-        kontakt@gartenbauverein-hilgertshausen.de
-      </a>
-    </dd>
+      <dt>Kontakt</dt>
+      <dd>
+        E-Mail:
+        <a href="mailto:kontakt@gartenbauverein-hilgertshausen.de">
+          kontakt@gartenbauverein-hilgertshausen.de
+        </a>
+      </dd>
 
-    <dt>Webseite</dt>
-    <dd>
-      <a href="https://www.gartenbauverein-hilgertshausen.de">
-        www.gartenbauverein-hilgertshausen.de
-      </a>
-    </dd>
+      <dt>Redaktionell verantwortlich</dt>
+      <dd>
+        Verantwortlich für den redaktionellen Inhalt dieser Seiten: 1. Vorsitzende Michelle Grimm.<br />
+        Verantwortlich für den redaktionellen Inhalt der Instagram Accounts: 2. Vorsitzender Günther Grimm.
+      </dd>
 
-    <dt>Redaktionell verantwortlich</dt>
-    <dd>
-      Michelle Grimm (1. Vorsitzende) – Website<br />
-      Günther Grimm (2. Vorsitzender) – Instagram
-    </dd>
-
-    <dt>Verbraucherstreitbeilegung</dt>
-    <dd>
-      Wir sind nicht bereit oder verpflichtet, an
-      Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
-      teilzunehmen.
-    </dd>
-  </dl>
+      <dt>Verbraucherstreitbeilegung / Universalschlichtungsstelle</dt>
+      <dd>
+        Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
+        Verbraucherschlichtungsstelle teilzunehmen.
+      </dd>
+    </dl>
+  </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent } from 'vue';
 
-export default defineComponent({})
+export default defineComponent({});
 </script>
