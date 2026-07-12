@@ -96,7 +96,7 @@
           <q-item
             clickable
             tag="a"
-            href="https://www.gartenbauverein-hilgertshausen.de/obstwege"
+            href="https://www.gartenbauverein-hilgertshausen.de/lehrpfade"
             target="_blank"
             rel="noopener noreferrer"
           >
