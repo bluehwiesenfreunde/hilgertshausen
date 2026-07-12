@@ -105,7 +105,7 @@
             </q-item-section>
 
             <q-item-section>
-              <q-item-label class="text-weight-bold"> Obstwege </q-item-label>
+              <q-item-label class="text-primary text-weight-bold">Obstwege</q-item-label>
             </q-item-section>
           </q-item>
 
