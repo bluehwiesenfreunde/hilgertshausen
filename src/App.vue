@@ -33,11 +33,12 @@
               <q-list>
                 <q-item clickable :to="{ name: 'orchard-list' }">
                   <q-item-section>
-                    <q-item-label class="text-weight-bold">{{
-                      $t('views.orchard.list.link')
-                    }}</q-item-label>
+                    <q-item-label class="text-weight-bold">
+                      {{ $t('views.orchard.list.link') }}
+                    </q-item-label>
                   </q-item-section>
                 </q-item>
+
                 <q-item
                   clickable
                   :to="{ name: 'orchard-details', params: { id: id } }"
@@ -51,6 +52,7 @@
               </q-list>
             </q-card>
           </q-expansion-item>
+
           <q-expansion-item
             group="main"
             :label="$t('terminology.variety', 2)"
@@ -77,6 +79,7 @@
                     <q-item-section>
                       {{ variety.name }}
                     </q-item-section>
+
                     <q-item-section avatar>
                       <q-badge
                         rounded
@@ -89,10 +92,30 @@
               </q-card>
             </q-expansion-item>
           </q-expansion-item>
+
+          <q-item
+            clickable
+            tag="a"
+            href="https://www.gartenbauverein-hilgertshausen.de/obstwege"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <q-item-section avatar>
+              <q-icon color="primary" name="mdi-map-marker-path" />
+            </q-item-section>
+
+            <q-item-section>
+              <q-item-label class="text-weight-bold">
+                Obstwege
+              </q-item-label>
+            </q-item-section>
+          </q-item>
+
           <q-item class="text-secondary absolute-bottom" :to="{ name: 'privacy-policy' }">
             <q-item-section avatar>
               <q-icon color="secondary" name="info" />
             </q-item-section>
+
             <q-item-section>
               <q-item-label class="text-secondary text-weight-bold">
                 {{ $t('views.privacy_policy.link') }}
@@ -139,6 +162,7 @@ export default defineComponent({
     const drawerLeft = ref($q.screen.gt.md);
     const expansionState = ref([false, false, false]);
     const speciesMap = ref<Map<Species, SpeciesInfo>>(new Map());
+
     VARIETIES_BY_SPECIES.forEach((varieties, species) => {
       speciesMap.value.set(species, {
         varieties: varieties.filter((variety) => {
@@ -156,8 +180,11 @@ export default defineComponent({
           route.name?.toString().startsWith('variety') === true,
           route.name?.toString().startsWith('projects') === true,
         ];
+
         if (route.name?.toString() !== 'variety-details') {
-          for (const speciesInfo of speciesMap.value.values()) speciesInfo.expansionState = false;
+          for (const speciesInfo of speciesMap.value.values()) {
+            speciesInfo.expansionState = false;
+          }
         } else {
           for (const speciesInfo of speciesMap.value.values()) {
             speciesInfo.expansionState =
@@ -181,6 +208,7 @@ export default defineComponent({
   },
 });
 </script>
+
 <style lang="sass">
 @media (min-width: $breakpoint-md-min)
   .drawer
